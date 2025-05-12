@@ -3,6 +3,7 @@
 const yargs = require('yargs/yargs')
 const { hideBin } = require('yargs/helpers')
 const http = require('http')
+const WEATHER_API_KEY = require('./config').WEATHER_API_KEY
 
 const argv = yargs(hideBin(process.argv))
     .option('city', {
@@ -13,7 +14,7 @@ const argv = yargs(hideBin(process.argv))
     .argv
 
 console.log(argv)
-const myAPIKey = process.env.WEATHER_API_KEY
+const myAPIKey = process.env.WEATHER_API_KEY || WEATHER_API_KEY
 
 const { city } = argv
 if (city) {

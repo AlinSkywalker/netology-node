@@ -1,1 +1,3 @@
 const WEATHER_API_KEY = '857cf1118315f3cbd3c676f6f2e10b70'
+
+module.exports = { WEATHER_API_KEY }
